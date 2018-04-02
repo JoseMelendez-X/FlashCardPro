@@ -12,6 +12,8 @@
 		59871DDB206DD51C00E91E1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59871DDA206DD51C00E91E1A /* Assets.xcassets */; };
 		59871DDE206DD51C00E91E1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59871DDC206DD51C00E91E1A /* LaunchScreen.storyboard */; };
 		59871DE9206DD51C00E91E1A /* FlashCardProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59871DE8206DD51C00E91E1A /* FlashCardProTests.swift */; };
+		59B6F7212072F8A2005B4A0C /* FlashCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B6F7202072F8A2005B4A0C /* FlashCard.swift */; };
+		59B6F7232072F8AE005B4A0C /* FlashCardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B6F7222072F8AE005B4A0C /* FlashCardDeck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 		59871DE4206DD51C00E91E1A /* FlashCardProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashCardProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59871DE8206DD51C00E91E1A /* FlashCardProTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardProTests.swift; sourceTree = "<group>"; };
 		59871DEA206DD51C00E91E1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59B6F7202072F8A2005B4A0C /* FlashCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCard.swift; sourceTree = "<group>"; };
+		59B6F7222072F8AE005B4A0C /* FlashCardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardDeck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +79,10 @@
 		59871DD2206DD51C00E91E1A /* FlashCardPro */ = {
 			isa = PBXGroup;
 			children = (
+				59B6F71C2072F859005B4A0C /* Models */,
+				59B6F71B2072F84E005B4A0C /* Views */,
+				59B6F71F2072F877005B4A0C /* Controllers */,
 				59871DF3206DD52700E91E1A /* Supporting Files */,
-				59871DD7206DD51C00E91E1A /* Main.storyboard */,
 				59871DDF206DD51C00E91E1A /* Info.plist */,
 			);
 			path = FlashCardPro;
@@ -99,6 +105,30 @@
 				59871DDC206DD51C00E91E1A /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		59B6F71B2072F84E005B4A0C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				59871DD7206DD51C00E91E1A /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		59B6F71C2072F859005B4A0C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				59B6F7202072F8A2005B4A0C /* FlashCard.swift */,
+				59B6F7222072F8AE005B4A0C /* FlashCardDeck.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		59B6F71F2072F877005B4A0C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +232,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59B6F7212072F8A2005B4A0C /* FlashCard.swift in Sources */,
+				59B6F7232072F8AE005B4A0C /* FlashCardDeck.swift in Sources */,
 				59871DD4206DD51C00E91E1A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
