@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--Flash Card Decks-->
         <scene sceneID="zag-60-uVu">
             <objects>
-                <collectionViewController id="sMa-L9-Jan" sceneMemberID="viewController">
+                <collectionViewController id="sMa-L9-Jan" customClass="FlashCardDecksCollectionViewController" customModule="FlashCardPro" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="5Yt-Ua-phb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +39,7 @@
                             <outlet property="delegate" destination="sMa-L9-Jan" id="iB4-2G-Xo8"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="4iy-tK-AaI"/>
+                    <navigationItem key="navigationItem" title="Flash Card Decks" id="4iy-tK-AaI"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8kD-5a-9Mb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,6 +14,7 @@
 		59871DE9206DD51C00E91E1A /* FlashCardProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59871DE8206DD51C00E91E1A /* FlashCardProTests.swift */; };
 		59B6F7212072F8A2005B4A0C /* FlashCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B6F7202072F8A2005B4A0C /* FlashCard.swift */; };
 		59B6F7232072F8AE005B4A0C /* FlashCardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B6F7222072F8AE005B4A0C /* FlashCardDeck.swift */; };
+		59B6F7272072FADC005B4A0C /* FlashCardDecksCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B6F7262072FADC005B4A0C /* FlashCardDecksCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		59871DEA206DD51C00E91E1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59B6F7202072F8A2005B4A0C /* FlashCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCard.swift; sourceTree = "<group>"; };
 		59B6F7222072F8AE005B4A0C /* FlashCardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardDeck.swift; sourceTree = "<group>"; };
+		59B6F7262072FADC005B4A0C /* FlashCardDecksCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardDecksCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		59B6F71F2072F877005B4A0C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				59B6F7262072FADC005B4A0C /* FlashCardDecksCollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59B6F7272072FADC005B4A0C /* FlashCardDecksCollectionViewController.swift in Sources */,
 				59B6F7212072F8A2005B4A0C /* FlashCard.swift in Sources */,
 				59B6F7232072F8AE005B4A0C /* FlashCardDeck.swift in Sources */,
 				59871DD4206DD51C00E91E1A /* AppDelegate.swift in Sources */,
