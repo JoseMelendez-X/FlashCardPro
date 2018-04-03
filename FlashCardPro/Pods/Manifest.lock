@@ -1,0 +1,20 @@
+PODS:
+  - Realm (3.3.0):
+    - Realm/Headers (= 3.3.0)
+  - Realm/Headers (3.3.0)
+  - RealmSwift (3.3.0):
+    - Realm (= 3.3.0)
+  - TextFieldEffects (1.4.0)
+
+DEPENDENCIES:
+  - RealmSwift
+  - TextFieldEffects
+
+SPEC CHECKSUMS:
+  Realm: 7d74ad6c5020432f58fe5e1df90bb6d97b2c7fef
+  RealmSwift: b2fa31a09c22e246026766557405505eeaad2b01
+  TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
+
+PODFILE CHECKSUM: d19255683c9b8d45a0f045890bea165e8ea6f4d0
+
+COCOAPODS: 1.4.0
