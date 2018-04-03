@@ -55,12 +55,44 @@
                     <navigationItem key="navigationItem" title="Flash Card Decks" id="4iy-tK-AaI">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="sKE-Wl-tqE">
                             <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="YO3-dy-jBE" kind="presentation" id="4Xk-Wz-6Yc"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8kD-5a-9Mb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1072.8" y="152.21674876847291"/>
+        </scene>
+        <!--Create New Deck View Controller-->
+        <scene sceneID="vpG-Hl-xfJ">
+            <objects>
+                <viewController id="YO3-dy-jBE" customClass="CreateNewDeckViewController" customModule="FlashCardPro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SaN-Kl-ac4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kkc-Tu-EQg">
+                                <rect key="frame" x="62" y="650" width="253" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonTapped:" destination="YO3-dy-jBE" eventType="touchUpInside" id="Olm-ck-f3X"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="NtC-eJ-pDx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7cD-sb-Mem" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1072.8" y="920.68965517241384"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="BfL-T4-oaE">
@@ -87,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XgQ-0G-3WQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1749.5999999999999" y="151.57421289355324"/>
+            <point key="canvasLocation" x="1962" y="151"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U0t-UC-dgq">
