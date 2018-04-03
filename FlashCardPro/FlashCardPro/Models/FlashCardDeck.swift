@@ -11,6 +11,7 @@ import Foundation
 struct  FlashCardDeck {
     
     //Mark: - Properties
+    var name: String
     
     //array of flashcards
     var flashCards = [FlashCard]()
