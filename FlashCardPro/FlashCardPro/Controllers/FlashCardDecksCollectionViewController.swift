@@ -12,7 +12,7 @@ private let reuseIdentifier = "FlashCardCell"
 
 class FlashCardDecksCollectionViewController: UICollectionViewController {
     
-    var names = ["Jose", "James", "Eddie"]
+    var names = ["Swift Interview Questions", "Math and Physics Questions", "Chapter 3 Geology Test Review"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +31,12 @@ class FlashCardDecksCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        //Reusable cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FlashCardDeckCollectionViewCell
         
+        
         cell.flashCardDeckTitleLabel.text = names[indexPath.row]
+        //custom configuration of the cell
         cell.configureCell()
         
         return cell
