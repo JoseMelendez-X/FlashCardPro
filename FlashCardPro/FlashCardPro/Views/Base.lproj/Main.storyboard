@@ -44,6 +44,7 @@
                                 <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="flashCardDeckTitleLabel" destination="wiz-qF-L1F" id="Y9v-qj-rLp"/>
+                                    <segue destination="7Rg-B4-W7k" kind="show" id="Ves-50-KpJ"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -141,32 +142,70 @@
             </objects>
             <point key="canvasLocation" x="1072.8" y="920.68965517241384"/>
         </scene>
-        <!--View Controller-->
+        <!--Create New Flash Card View Controller-->
+        <scene sceneID="ufX-gU-MYi">
+            <objects>
+                <viewController id="Kug-FN-PlT" customClass="CreateNewFlashCardViewController" customModule="FlashCardPro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KDN-ig-9eg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="frw-C1-tkI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bym-5Q-oGU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2118" y="921"/>
+        </scene>
+        <!--Flash Cards-->
         <scene sceneID="BfL-T4-oaE">
             <objects>
-                <viewController id="7Rg-B4-W7k" sceneMemberID="viewController">
+                <viewController id="7Rg-B4-W7k" customClass="FlashCardsViewController" customModule="FlashCardPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xWj-Th-aFv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="na1-aJ-FBV">
-                                <rect key="frame" x="16" y="78" width="343" height="420"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oft-eG-ZSH" userLabel="EmptyDataView">
+                                <rect key="frame" x="0.0" y="140" width="375" height="672"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Flash Cards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xB9-ST-rR1">
+                                        <rect key="frame" x="60" y="296" width="254" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                        <color key="textColor" red="0.96071938451776651" green="0.96071938451776651" blue="0.96071938451776651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have not created any flash cards. Click the plus sign on the top right to begin creating your flash cards" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGf-jq-ha3">
+                                        <rect key="frame" x="8" y="385" width="367" height="191"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="0.76169199486301364" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="documents-empty" translatesAutoresizingMaskIntoConstraints="NO" id="Pmo-v1-BBC">
+                                        <rect key="frame" x="100" y="91" width="174" height="145"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.83743780850000005" green="0.34132630880615095" blue="0.36835269531675513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b30-pQ-iEL">
-                                <rect key="frame" x="140" y="608" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Flip"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xxh-BL-ita"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Flash Cards" id="ANp-PJ-XVO">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="twh-f9-fbL">
+                            <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="Kug-FN-PlT" kind="presentation" id="yrk-qk-fvK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XgQ-0G-3WQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1962" y="151"/>
+            <point key="canvasLocation" x="2118" y="152"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U0t-UC-dgq">
@@ -189,5 +228,6 @@
     </scenes>
     <resources>
         <image name="cross-out-mark" width="85" height="85"/>
+        <image name="documents-empty" width="42" height="42"/>
     </resources>
 </document>

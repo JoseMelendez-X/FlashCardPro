@@ -19,13 +19,6 @@ class FlashCardDeck: Object {
     
     //MARK: - Functions
     
-
-    //Load
-    func loadFlashCardDecks() -> Results<FlashCardDeck> {
-        return (realm?.objects(FlashCardDeck.self))!
-    }
-
-    
     //remove flashcards
     
     //add flashcards
