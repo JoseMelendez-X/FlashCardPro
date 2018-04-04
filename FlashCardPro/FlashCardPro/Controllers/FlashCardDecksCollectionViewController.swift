@@ -70,7 +70,7 @@ class FlashCardDecksCollectionViewController: UICollectionViewController {
     
     
     
-    //returns all of the FlashCardDeck Objects
+    //Read FlashCardDecks, returns all of the FlashCardDeck Objects
     func loadFlashCardDecks() -> Results<FlashCardDeck> {
         return realm.objects(FlashCardDeck.self)
     }

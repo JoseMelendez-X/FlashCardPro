@@ -149,13 +149,95 @@
                     <view key="view" contentMode="scaleToFill" id="KDN-ig-9eg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qi0-Ro-qFY">
+                                <rect key="frame" x="16" y="176" width="343" height="441"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="54N-bA-rMs" userLabel="AnswerView">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="441"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Enter Answer" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="F5G-nL-MaO">
+                                                <rect key="frame" x="8" y="8" width="327" height="425"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.96071938450000005" green="0.96071938450000005" blue="0.96071938450000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T6V-qg-eCu" userLabel="QuestionView">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="441"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Enter question" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="diQ-lC-fNn">
+                                                <rect key="frame" x="8" y="0.0" width="327" height="433"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.96071938450000005" green="0.96071938450000005" blue="0.96071938450000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVK-f1-Sr2">
+                                <rect key="frame" x="31" y="662" width="102" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" backgroundImage="two-rotating-arrows"/>
+                                <connections>
+                                    <action selector="flipButtonTapped:" destination="Kug-FN-PlT" eventType="touchUpInside" id="H7b-94-ytC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RK6-Es-pS8">
+                                <rect key="frame" x="330" y="88" width="29" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="cross-out-mark"/>
+                                <connections>
+                                    <action selector="XButtonTapped:" destination="Kug-FN-PlT" eventType="touchUpInside" id="dLH-BA-U61"/>
+                                    <action selector="XButtonTapped:" destination="YO3-dy-jBE" eventType="touchUpInside" id="oAQ-xC-sJo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0w-f5-5Yf">
+                                <rect key="frame" x="31" y="114" width="121" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTb-fv-Vqu">
+                                <rect key="frame" x="179" y="678" width="159" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.85650354623794556" blue="0.26704379916191101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="SAVE">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="Kug-FN-PlT" eventType="touchUpInside" id="jY2-xW-WB6"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="frw-C1-tkI"/>
                     </view>
+                    <connections>
+                        <outlet property="answerTextView" destination="F5G-nL-MaO" id="EJD-1C-si6"/>
+                        <outlet property="answerView" destination="54N-bA-rMs" id="UYC-Uk-ahn"/>
+                        <outlet property="questionAnswerLabel" destination="P0w-f5-5Yf" id="vlv-2k-gKo"/>
+                        <outlet property="questionTextView" destination="diQ-lC-fNn" id="nzO-0X-SMW"/>
+                        <outlet property="questionView" destination="T6V-qg-eCu" id="VwU-bJ-DGE"/>
+                        <outlet property="saveButton" destination="KTb-fv-Vqu" id="dRo-SG-H4V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bym-5Q-oGU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2118" y="921"/>
+            <point key="canvasLocation" x="2117.5999999999999" y="920.68965517241384"/>
         </scene>
         <!--Flash Cards-->
         <scene sceneID="BfL-T4-oaE">
@@ -229,5 +311,6 @@
     <resources>
         <image name="cross-out-mark" width="85" height="85"/>
         <image name="documents-empty" width="42" height="42"/>
+        <image name="two-rotating-arrows" width="42" height="42"/>
     </resources>
 </document>
