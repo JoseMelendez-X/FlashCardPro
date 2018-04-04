@@ -8,9 +8,12 @@
 
 import UIKit
 import TextFieldEffects
+import RealmSwift
 
 class CreateNewDeckViewController: UIViewController {
     
+    //MARK: - Properties
+    var flashCardDeckVC = FlashCardDecksCollectionViewController()
     
     //MARK: - IB Outlets
     @IBOutlet weak var flashCardTitleTextField: HoshiTextField!
@@ -29,11 +32,20 @@ class CreateNewDeckViewController: UIViewController {
         //dimiss self
         self.dismiss(animated: true, completion: nil)
     }
-    //Create a new deck on flashCardDecks view controller and dismiss itself
+    //Creates a new deck on flashCardDecks view controller and dismiss itself
     @IBAction func doneButtonTapped(_ sender: UIButton) {
+        
+        //create a new flashcard deck
+        let newFlashCardDeck = FlashCardDeck()
+        //give the flashcard deck a name
+        newFlashCardDeck.name = flashCardTitleTextField.text!
+        //save newFlashCardDeck
+        flashCardDeckVC.save(flashcardDeck: newFlashCardDeck)
         
         //dimiss self
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
 
 }

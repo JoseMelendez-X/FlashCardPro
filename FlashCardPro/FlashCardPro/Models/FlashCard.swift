@@ -7,12 +7,19 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct FlashCard {
+class FlashCard: Object {
     
     //MARK: - Properties
-    var isFrontFacing = false
-    var answer: String
-    var question: String
+    @objc dynamic var isFrontFacing = false
+    @objc dynamic var answer = ""
+    @objc dynamic var question = ""
+    
+    //establishes Many to One relationship with FlashCardDeck
+    let parentDeck = LinkingObjects(fromType: FlashCardDeck.self, property: "flashCards")
+    
+    
+    
    
 }

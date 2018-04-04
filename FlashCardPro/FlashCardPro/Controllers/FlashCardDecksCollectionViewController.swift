@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import RealmSwift
 
 private let reuseIdentifier = "FlashCardCell"
 
 class FlashCardDecksCollectionViewController: UICollectionViewController {
     
-    var names = ["Swift Interview Questions", "Math and Physics Questions", "Chapter 3 Geology Test Review"]
-
+    //MARK: - Properties
+    
+    //realm object
+    let realm = try! Realm()
+ 
+    
+    //MARK: 
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,12 +27,18 @@ class FlashCardDecksCollectionViewController: UICollectionViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        collectionView?.reloadData()
+    }
+    
     
     //MARK: Required Data Source Functions
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return names.count
+        return loadFlashCardDecks().count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -35,10 +47,33 @@ class FlashCardDecksCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FlashCardDeckCollectionViewCell
         
         
-        cell.flashCardDeckTitleLabel.text = names[indexPath.row]
+        cell.flashCardDeckTitleLabel.text = loadFlashCardDecks()[indexPath.row].name
         //custom configuration of the cell
         cell.configureCell()
         
         return cell
     }
+    
+    
+    //MARK: - Functions
+    
+    //Save FlashCardDeck
+    func save(flashcardDeck: FlashCardDeck) {
+        do {
+            try realm.write {
+                realm.add(flashcardDeck)
+            }
+        } catch {
+            print("error saving FlashCardDeck \(error.localizedDescription)")
+        }
+    }
+    
+    
+    
+    //returns all of the FlashCardDeck Objects
+    func loadFlashCardDecks() -> Results<FlashCardDeck> {
+        return realm.objects(FlashCardDeck.self)
+    }
+
 }
+

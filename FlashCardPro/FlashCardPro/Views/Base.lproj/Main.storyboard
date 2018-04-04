@@ -56,7 +56,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="sKE-Wl-tqE">
                             <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="YO3-dy-jBE" kind="presentation" id="4Xk-Wz-6Yc"/>
+                                <segue destination="YO3-dy-jBE" kind="presentation" identifier="toCreateNewDeckVC" id="4Xk-Wz-6Yc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

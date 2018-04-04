@@ -7,16 +7,24 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct  FlashCardDeck {
+class FlashCardDeck: Object {
     
     //Mark: - Properties
-    var name: String
+    @objc dynamic var name = ""
     
-    //array of flashcards
-    var flashCards = [FlashCard]()
+    //array of flashcards, One to Many relationship
+    let flashCards = List<FlashCard>()
     
     //MARK: - Functions
+    
+
+    //Load
+    func loadFlashCardDecks() -> Results<FlashCardDeck> {
+        return (realm?.objects(FlashCardDeck.self))!
+    }
+
     
     //remove flashcards
     
