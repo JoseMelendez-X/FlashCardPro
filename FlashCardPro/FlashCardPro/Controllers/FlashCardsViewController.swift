@@ -10,5 +10,18 @@ import UIKit
 
 class FlashCardsViewController: UIViewController {
 
+    //MARK: - Properties
+    var flashCardDeck: FlashCardDeck?
+    
+    
+    //MARK: - Functions
+    
+    //Pass flashCard object to the next view controller
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCreateNewFlashCardVC" {
+            let destinationVC = segue.destination as! CreateNewFlashCardViewController
+            destinationVC.flashCardDeck = flashCardDeck
+        }
+    }
 
 }

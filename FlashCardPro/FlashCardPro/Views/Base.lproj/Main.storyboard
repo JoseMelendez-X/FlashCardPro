@@ -44,7 +44,6 @@
                                 <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="flashCardDeckTitleLabel" destination="wiz-qF-L1F" id="Y9v-qj-rLp"/>
-                                    <segue destination="7Rg-B4-W7k" kind="show" id="Ves-50-KpJ"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -61,6 +60,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="7Rg-B4-W7k" kind="show" identifier="toFlashCardsVC" id="Sfx-uG-a5a"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8kD-5a-9Mb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -280,7 +282,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="twh-f9-fbL">
                             <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="Kug-FN-PlT" kind="presentation" id="yrk-qk-fvK"/>
+                                <segue destination="Kug-FN-PlT" kind="presentation" identifier="toCreateNewFlashCardVC" id="yrk-qk-fvK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

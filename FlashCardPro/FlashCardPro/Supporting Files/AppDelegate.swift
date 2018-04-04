@@ -16,9 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-//        //location of the realm file
+        //location of the realm file
 //        print(Realm.Configuration.defaultConfiguration.fileURL)
-//        
+//
 //        //initialize a realm
 //        do {
 //            let realm = try Realm()

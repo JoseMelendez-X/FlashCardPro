@@ -9,15 +9,19 @@
 import UIKit
 import RealmSwift
 
+
 private let reuseIdentifier = "FlashCardCell"
 
 class FlashCardDecksCollectionViewController: UICollectionViewController {
+ 
     
     //MARK: - Properties
     
     //realm object
     let realm = try! Realm()
- 
+    
+    var selectedFlashCardDeck: FlashCardDeck?
+    
     
     //MARK: 
     override func viewDidLoad() {
@@ -54,8 +58,20 @@ class FlashCardDecksCollectionViewController: UICollectionViewController {
         return cell
     }
     
+    //MARK: Delegate Functions
     
-    //MARK: - Functions
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        //gets the selectedFlashCardDeck
+        selectedFlashCardDeck = loadFlashCardDecks()[indexPath.row]
+        
+        //perfrom segue
+        self.performSegue(withIdentifier: "toFlashCardsVC", sender: self)
+
+    }
+    
+    
+    //MARK: - Functions Saving and Reading
     
     //Save FlashCardDeck
     func save(flashcardDeck: FlashCardDeck) {
@@ -73,6 +89,19 @@ class FlashCardDecksCollectionViewController: UICollectionViewController {
     //Read FlashCardDecks, returns all of the FlashCardDeck Objects
     func loadFlashCardDecks() -> Results<FlashCardDeck> {
         return realm.objects(FlashCardDeck.self)
+    }
+    
+    //MARK: Functions prepareforsegue
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+
+
+        if segue.identifier == "toFlashCardsVC" {
+            let destinationVC = segue.destination as! FlashCardsViewController
+            //pass the selectedFlashCardDeck foward to destinationVC
+            destinationVC.flashCardDeck = selectedFlashCardDeck
+        }
     }
 
 }

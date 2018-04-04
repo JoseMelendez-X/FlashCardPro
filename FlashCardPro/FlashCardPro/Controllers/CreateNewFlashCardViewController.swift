@@ -7,12 +7,13 @@
 //
 
 import UIKit
-
+import RealmSwift
 class CreateNewFlashCardViewController: UIViewController {
     
     //MARK: - Properties
     private var isAnswerViewFaceUp = false
-    
+    var flashCardDeck: FlashCardDeck?
+    let realm = try! Realm()
 
     //MARK: - IB Outlets
     
@@ -66,11 +67,29 @@ class CreateNewFlashCardViewController: UIViewController {
     }
     
     @IBAction func saveButtonTapped(_ sender: UIButton) {
+        
+        //save flashCard to the flashcard deck object it belongs to
+        
+        do {
+            try self.realm.write {
+                
+                let newFlashCard = FlashCard()
+                newFlashCard.answer = answerTextView.text
+                newFlashCard.question = questionTextView.text
+                flashCardDeck?.flashCards.append(newFlashCard)
+                
+                }
+            } catch {
+                print("Error saving flashCard \(error)")
+            }
+        
         //dismiss self
         self.dismiss(animated: true, completion: nil)
     }
     
-    func customizeTextViews(textviews: [UITextView]) {
+    
+    //MARK: Functions
+    private func customizeTextViews(textviews: [UITextView]) {
         //loops through textviews
         for textview in textviews {
             //applies customization to each textfield
