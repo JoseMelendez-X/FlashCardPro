@@ -278,14 +278,38 @@
                                 <rect key="frame" x="0.0" y="140" width="375" height="672"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceC-SY-B89">
-                                        <rect key="frame" x="172" y="531" width="75" height="44"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceC-SY-B89">
+                                        <rect key="frame" x="135" y="550" width="104" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Flip"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" backgroundImage="two-rotating-arrows"/>
                                         <connections>
                                             <action selector="flipButtonTapped:" destination="7Rg-B4-W7k" eventType="touchUpInside" id="Qgg-m7-EIG"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1SB-JF-wl0">
+                                        <rect key="frame" x="14" y="556" width="81" height="69"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="left-arrow-angle"/>
+                                        <connections>
+                                            <action selector="leftArrowButtonTapped:" destination="7Rg-B4-W7k" eventType="touchUpInside" id="OL0-IM-1Z4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baP-4W-9hF">
+                                        <rect key="frame" x="274" y="556" width="81" height="69"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="right-arrow-angle"/>
+                                        <connections>
+                                            <action selector="rightArrowButtonTapped:" destination="7Rg-B4-W7k" eventType="touchUpInside" id="qgu-gH-zaT"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLm-3P-Kwr">
+                                        <rect key="frame" x="14" y="499" width="94" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -344,6 +368,7 @@
                         <outlet property="emptyDataView" destination="oft-eG-ZSH" id="oP8-CT-41w"/>
                         <outlet property="flashCardView" destination="tPF-b3-W5f" id="FYR-Hj-uIX"/>
                         <outlet property="mainView" destination="y3i-Yz-xbQ" id="3jP-Ie-yud"/>
+                        <outlet property="questionAnswerLabel" destination="NLm-3P-Kwr" id="9bn-aM-bh1"/>
                         <outlet property="questionTextView" destination="LSv-Oy-PEf" id="uDk-v1-dds"/>
                         <outlet property="questionView" destination="McS-vZ-uom" id="rHd-Fb-0OF"/>
                     </connections>
@@ -374,6 +399,8 @@
     <resources>
         <image name="cross-out-mark" width="85" height="85"/>
         <image name="documents-empty" width="42" height="42"/>
+        <image name="left-arrow-angle" width="42" height="42"/>
+        <image name="right-arrow-angle" width="42" height="42"/>
         <image name="two-rotating-arrows" width="42" height="42"/>
     </resources>
 </document>
