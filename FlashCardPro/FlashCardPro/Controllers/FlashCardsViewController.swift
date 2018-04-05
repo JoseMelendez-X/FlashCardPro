@@ -26,18 +26,18 @@ class FlashCardsViewController: UIViewController {
     @IBOutlet weak var flashCardView: UIView!
     @IBOutlet weak var questionTextView: UITextView!
     @IBOutlet weak var answerTextView: UITextView!
+
     
     //MARK: Lifecycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+  
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         if flashCardDeck?.flashCards.count == 0 {
             
             mainView.isHidden = true
             flashCardView.isHidden = true
             
         } else {
-            
             flashCards = flashCardDeck?.flashCards
             
             questionTextView.text = flashCards![count].question
@@ -48,6 +48,7 @@ class FlashCardsViewController: UIViewController {
             answerTextView.layer.cornerRadius = 15.0
             
         }
+        
     }
     
     //MARK: IB Actions

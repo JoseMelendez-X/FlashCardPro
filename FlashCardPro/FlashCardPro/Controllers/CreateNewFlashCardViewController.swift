@@ -84,7 +84,7 @@ class CreateNewFlashCardViewController: UIViewController {
             }
         
         //dismiss self
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true) 
     }
     
     
@@ -96,6 +96,8 @@ class CreateNewFlashCardViewController: UIViewController {
             textview.layer.cornerRadius = 10.0
         }
     }
+    
+   
     
     
     
