@@ -10,7 +10,15 @@ import UIKit
 import TextFieldEffects
 import RealmSwift
 
-class CreateNewDeckViewController: UIViewController {
+class CreateNewDeckViewController: UIViewController, UITextFieldDelegate {
+ 
+    
+    //Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        flashCardTitleTextField.delegate = self
+    }
     
     //MARK: - Properties
     var flashCardDeckVC = FlashCardDecksCollectionViewController()
@@ -46,6 +54,20 @@ class CreateNewDeckViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    //MARK: - Delegate Functions for self
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        //dismiss keyboard
+        self.view.endEditing(true)
+    }
+    
+    //MARK: - Delegate functions for textfield
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //removes keyboard when user taps return
+        textField.resignFirstResponder()
+        return true
+    }
     
 
 }

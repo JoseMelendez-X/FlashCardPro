@@ -22,11 +22,17 @@ class FlashCardDecksCollectionViewController: UICollectionViewController {
     
     var selectedFlashCardDeck: FlashCardDeck?
     
+    @IBOutlet weak var emptyDataView: UIView!
     
     //MARK: 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+     
+        if loadFlashCardDecks().count == 0 {
+            emptyDataView.isHidden = false
+        } else {
+            emptyDataView.isHidden = true
+        }
         //perfer large titles
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }

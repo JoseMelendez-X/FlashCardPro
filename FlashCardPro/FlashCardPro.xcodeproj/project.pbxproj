@@ -21,6 +21,7 @@
 		59B6F72C20730D3E005B4A0C /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B6F72B20730D3E005B4A0C /* CollectionViewCell.swift */; };
 		59C98AB020747DF600778B8B /* FlashCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C98AAF20747DF600778B8B /* FlashCardsViewController.swift */; };
 		59C98AB220747E1600778B8B /* CreateNewFlashCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C98AB120747E1600778B8B /* CreateNewFlashCardViewController.swift */; };
+		59D2E0FA207822670035F3D3 /* textView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2E0F9207822670035F3D3 /* textView.swift */; };
 		844AD5CA882BFBF89547E6A2 /* Pods_FlashCardPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DF87049886AF6B11183483 /* Pods_FlashCardPro.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		59B6F72B20730D3E005B4A0C /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		59C98AAF20747DF600778B8B /* FlashCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardsViewController.swift; sourceTree = "<group>"; };
 		59C98AB120747E1600778B8B /* CreateNewFlashCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewFlashCardViewController.swift; sourceTree = "<group>"; };
+		59D2E0F9207822670035F3D3 /* textView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textView.swift; sourceTree = "<group>"; };
 		5B203CCE9868BE61426125D3 /* Pods-FlashCardProTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashCardProTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlashCardProTests/Pods-FlashCardProTests.release.xcconfig"; sourceTree = "<group>"; };
 		8F71783717816F51C9E65D91 /* Pods-FlashCardPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashCardPro.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlashCardPro/Pods-FlashCardPro.release.xcconfig"; sourceTree = "<group>"; };
 		AE8DF1D9E1D6F5986F2814FE /* Pods_FlashCardProTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlashCardProTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				59B6F72B20730D3E005B4A0C /* CollectionViewCell.swift */,
+				59D2E0F9207822670035F3D3 /* textView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				59B6F7232072F8AE005B4A0C /* FlashCardDeck.swift in Sources */,
 				59B6F729207301AE005B4A0C /* FlashCardDeckCollectionViewCell.swift in Sources */,
 				59871DD4206DD51C00E91E1A /* AppDelegate.swift in Sources */,
+				59D2E0FA207822670035F3D3 /* textView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,7 +585,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.JoseMelendez.FlashCardPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -600,7 +604,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.JoseMelendez.FlashCardPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

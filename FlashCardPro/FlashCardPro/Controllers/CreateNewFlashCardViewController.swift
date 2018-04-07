@@ -36,6 +36,9 @@ class CreateNewFlashCardViewController: UIViewController {
         customizeTextViews(textviews: [answerTextView, questionTextView])
        
         saveButton.layer.cornerRadius = 10.0
+        
+        questionTextView.placeholder = "Enter Question"
+        answerTextView.placeholder = "Enter Answer"
     }
     
     //MARK: - IB Actions
@@ -97,8 +100,10 @@ class CreateNewFlashCardViewController: UIViewController {
         }
     }
     
-   
+    //MARK: Delegate functions for self
     
-    
-    
+    //removes keyboard when user touches the screen
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }

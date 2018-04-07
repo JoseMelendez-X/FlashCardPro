@@ -25,6 +25,41 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="15" minY="10" maxX="15" maxY="5"/>
                         </collectionViewFlowLayout>
+                        <view key="backgroundView" contentMode="scaleToFill" id="Kqa-lD-ygG" userLabel="EmptyDataView">
+                            <rect key="frame" x="0.0" y="-140" width="375" height="812"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You have not created any flash card decks. Click the plus sign on the top right corner to begin creating your flash card deck." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6c-xl-4Q1">
+                                    <rect key="frame" x="0.0" y="507" width="375" height="119.66666666666669"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <color key="textColor" white="1" alpha="0.76169199489999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="documents-empty" translatesAutoresizingMaskIntoConstraints="NO" id="mKw-qy-CeQ">
+                                    <rect key="frame" x="100" y="218" width="174" height="145"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="145" id="ERF-OQ-ncL"/>
+                                        <constraint firstAttribute="width" constant="174" id="mhE-YA-Ydy"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="No Flash Decks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dms-jm-2ef">
+                                    <rect key="frame" x="51" y="414" width="272" height="47"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                    <color key="textColor" red="0.96071938450000005" green="0.96071938450000005" blue="0.96071938450000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.83743780850000005" green="0.34132630879999998" blue="0.36835269529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="d6c-xl-4Q1" firstAttribute="leading" secondItem="Kqa-lD-ygG" secondAttribute="leading" id="3As-Nk-r2l"/>
+                                <constraint firstAttribute="trailing" secondItem="d6c-xl-4Q1" secondAttribute="trailing" id="FMy-SI-j9u"/>
+                                <constraint firstItem="dms-jm-2ef" firstAttribute="top" secondItem="mKw-qy-CeQ" secondAttribute="bottom" constant="60" id="U6r-Xz-2vp"/>
+                                <constraint firstItem="mKw-qy-CeQ" firstAttribute="leading" secondItem="Kqa-lD-ygG" secondAttribute="leading" constant="100" id="YNM-Js-P92"/>
+                                <constraint firstItem="mKw-qy-CeQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Kqa-lD-ygG" secondAttribute="top" constant="218" id="cbX-vt-z4A"/>
+                                <constraint firstItem="dms-jm-2ef" firstAttribute="centerX" secondItem="Kqa-lD-ygG" secondAttribute="centerX" id="dzw-Qz-Hb3"/>
+                                <constraint firstItem="d6c-xl-4Q1" firstAttribute="top" secondItem="dms-jm-2ef" secondAttribute="bottom" constant="42" id="szx-Mc-ywW"/>
+                            </constraints>
+                        </view>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlashCardCell" id="sd7-rd-JhV" customClass="FlashCardDeckCollectionViewCell" customModule="FlashCardPro" customModuleProvider="target">
                                 <rect key="frame" x="15" y="10" width="167" height="200"/>
@@ -62,6 +97,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="emptyDataView" destination="Kqa-lD-ygG" id="nFz-eb-PGL"/>
                         <segue destination="7Rg-B4-W7k" kind="show" identifier="toFlashCardsVC" id="Sfx-uG-a5a"/>
                     </connections>
                 </collectionViewController>
@@ -89,27 +125,6 @@
                                     <action selector="doneButtonTapped:" destination="YO3-dy-jBE" eventType="touchUpInside" id="Olm-ck-f3X"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l4w-2o-nUd" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="16" y="425" width="343" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
-                                        <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
-                                        <color key="value" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Flash Card Deck" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIL-WM-mcR">
                                 <rect key="frame" x="49" y="135" width="277" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -132,6 +147,27 @@
                                     <action selector="XButtonTapped:" destination="YO3-dy-jBE" eventType="touchUpInside" id="gLa-wA-gxt"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l4w-2o-nUd" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="18" y="377" width="343" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="NtC-eJ-pDx"/>
@@ -160,7 +196,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="441"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Enter Answer" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="F5G-nL-MaO">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="F5G-nL-MaO">
                                                 <rect key="frame" x="8" y="8" width="327" height="425"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.96071938450000005" green="0.96071938450000005" blue="0.96071938450000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -174,7 +210,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="441"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Enter question" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="diQ-lC-fNn">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="diQ-lC-fNn">
                                                 <rect key="frame" x="8" y="0.0" width="327" height="433"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.96071938450000005" green="0.96071938450000005" blue="0.96071938450000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
