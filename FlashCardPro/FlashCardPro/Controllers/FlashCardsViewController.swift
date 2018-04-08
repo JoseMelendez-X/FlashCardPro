@@ -32,12 +32,18 @@ class FlashCardsViewController: UIViewController {
   
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        
         if flashCardDeck?.flashCards.count == 0 {
             
             mainView.isHidden = true
             flashCardView.isHidden = true
             
         } else {
+            
+            flashCardView.isHidden = false
+            mainView.isHidden = false
+            
             flashCards = flashCardDeck?.flashCards
             
             questionTextView.text = flashCards![count].question

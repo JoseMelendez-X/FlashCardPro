@@ -24,23 +24,27 @@ class FlashCardDecksCollectionViewController: UICollectionViewController {
     
     @IBOutlet weak var emptyDataView: UIView!
     
-    //MARK: 
+    //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-     
-        if loadFlashCardDecks().count == 0 {
-            emptyDataView.isHidden = false
-        } else {
-            emptyDataView.isHidden = true
-        }
+    
         //perfer large titles
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         collectionView?.reloadData()
+        
+        if loadFlashCardDecks().count == 0 {
+            emptyDataView.isHidden = false
+        } else {
+            emptyDataView.isHidden = true
+        }
+        
     }
     
     
