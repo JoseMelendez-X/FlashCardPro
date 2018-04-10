@@ -113,9 +113,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kkc-Tu-EQg">
-                                <rect key="frame" x="63" y="651" width="253" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kkc-Tu-EQg">
+                                <rect key="frame" x="63" y="652" width="253" height="53"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
                                 <state key="normal" title="Done">
@@ -125,31 +124,23 @@
                                     <action selector="doneButtonTapped:" destination="YO3-dy-jBE" eventType="touchUpInside" id="Olm-ck-f3X"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Flash Card Deck" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIL-WM-mcR">
-                                <rect key="frame" x="49" y="135" width="277" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Flash Card Deck" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIL-WM-mcR">
+                                <rect key="frame" x="49" y="232" width="277" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Just give your new deck a title and thats it" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sy-yZ-T6D">
-                                <rect key="frame" x="69" y="179" width="236" height="152"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just give your new deck a title and thats it" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sy-yZ-T6D">
+                                <rect key="frame" x="69" y="276" width="236" height="55"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O73-zL-5aV">
-                                <rect key="frame" x="330" y="80" width="29" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="cross-out-mark"/>
-                                <connections>
-                                    <action selector="XButtonTapped:" destination="YO3-dy-jBE" eventType="touchUpInside" id="gLa-wA-gxt"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l4w-2o-nUd" customClass="HoshiTextField" customModule="TextFieldEffects">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l4w-2o-nUd" customClass="HoshiTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="18" y="377" width="343" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="EfX-ng-R63"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -168,8 +159,37 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O73-zL-5aV">
+                                <rect key="frame" x="330" y="60" width="29" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="E9C-fB-XbH"/>
+                                    <constraint firstAttribute="height" constant="31" id="YXy-1h-jKW"/>
+                                </constraints>
+                                <state key="normal" image="cross-out-mark"/>
+                                <connections>
+                                    <action selector="XButtonTapped:" destination="YO3-dy-jBE" eventType="touchUpInside" id="gLa-wA-gxt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kkc-Tu-EQg" firstAttribute="centerX" secondItem="NtC-eJ-pDx" secondAttribute="centerX" constant="2" id="6bI-QU-R8I"/>
+                            <constraint firstItem="3sy-yZ-T6D" firstAttribute="leading" secondItem="NtC-eJ-pDx" secondAttribute="leading" constant="69" id="6cm-SP-0sQ"/>
+                            <constraint firstItem="NtC-eJ-pDx" firstAttribute="trailing" secondItem="O73-zL-5aV" secondAttribute="trailing" constant="16" id="Axt-yJ-7GL"/>
+                            <constraint firstItem="NtC-eJ-pDx" firstAttribute="trailing" secondItem="Kkc-Tu-EQg" secondAttribute="trailing" constant="59" id="BGn-ao-yA7"/>
+                            <constraint firstItem="l4w-2o-nUd" firstAttribute="leading" secondItem="NtC-eJ-pDx" secondAttribute="leading" constant="18" id="NUl-jd-VXM"/>
+                            <constraint firstItem="Kkc-Tu-EQg" firstAttribute="leading" secondItem="NtC-eJ-pDx" secondAttribute="leading" constant="63" id="O0C-ZF-i8M"/>
+                            <constraint firstItem="NtC-eJ-pDx" firstAttribute="trailing" secondItem="l4w-2o-nUd" secondAttribute="trailing" constant="14" id="Shj-ej-XjG"/>
+                            <constraint firstItem="NtC-eJ-pDx" firstAttribute="trailing" secondItem="3sy-yZ-T6D" secondAttribute="trailing" constant="70" id="VCR-KH-evS"/>
+                            <constraint firstItem="3sy-yZ-T6D" firstAttribute="top" secondItem="kIL-WM-mcR" secondAttribute="bottom" constant="8" id="Vzo-85-5lO"/>
+                            <constraint firstItem="l4w-2o-nUd" firstAttribute="centerX" secondItem="NtC-eJ-pDx" secondAttribute="centerX" constant="2" id="eUT-jd-5iU"/>
+                            <constraint firstItem="NtC-eJ-pDx" firstAttribute="bottom" secondItem="Kkc-Tu-EQg" secondAttribute="bottom" constant="73" id="gjg-Pu-bUy"/>
+                            <constraint firstItem="Kkc-Tu-EQg" firstAttribute="top" secondItem="l4w-2o-nUd" secondAttribute="bottom" constant="216" id="hbg-kB-32q"/>
+                            <constraint firstItem="kIL-WM-mcR" firstAttribute="leading" secondItem="NtC-eJ-pDx" secondAttribute="leading" constant="49" id="iEx-C5-GcO"/>
+                            <constraint firstItem="O73-zL-5aV" firstAttribute="top" secondItem="NtC-eJ-pDx" secondAttribute="top" constant="16" id="jWx-Pg-syP"/>
+                            <constraint firstItem="NtC-eJ-pDx" firstAttribute="trailing" secondItem="kIL-WM-mcR" secondAttribute="trailing" constant="49" id="mcF-PK-MRJ"/>
+                            <constraint firstItem="l4w-2o-nUd" firstAttribute="top" secondItem="3sy-yZ-T6D" secondAttribute="bottom" constant="46" id="p6F-Vb-WWX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="NtC-eJ-pDx"/>
                     </view>
                     <connections>
@@ -321,7 +341,7 @@
                                 <rect key="frame" x="0.0" y="140" width="375" height="672"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Flash Cards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xB9-ST-rR1">
-                                        <rect key="frame" x="60" y="296" width="254" height="46.666666666666686"/>
+                                        <rect key="frame" x="60.666666666666657" y="296" width="253.99999999999997" height="46.666666666666686"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                         <color key="textColor" red="0.96071938451776651" green="0.96071938451776651" blue="0.96071938451776651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
