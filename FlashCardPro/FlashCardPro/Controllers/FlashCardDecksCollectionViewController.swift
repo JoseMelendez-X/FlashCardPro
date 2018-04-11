@@ -31,6 +31,7 @@ class FlashCardDecksCollectionViewController: UICollectionViewController {
     
         //set edit bar button item
         navigationItem.leftBarButtonItem = editButtonItem
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.red
         //perfer large titles
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }

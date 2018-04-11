@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 protocol FlashCardDeckDelegate: class {
     
@@ -19,7 +18,6 @@ class FlashCardDeckCollectionViewCell: UICollectionViewCell {
     
     //MARK: Properties
     weak var delegate: FlashCardDeckDelegate?
-    let realm = try! Realm()
     
     //MARK: IB Outlets
     @IBOutlet weak var flashCardDeckTitleLabel: UILabel!{
