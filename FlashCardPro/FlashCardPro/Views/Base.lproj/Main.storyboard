@@ -69,16 +69,25 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swift Interview Questions" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiz-qF-L1F">
-                                            <rect key="frame" x="20" y="0.0" width="127" height="165"/>
+                                            <rect key="frame" x="20" y="20" width="127" height="137"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fo2-j3-ysK">
+                                            <rect key="frame" x="9" y="157" width="32" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" backgroundImage="remove-symbol"/>
+                                            <connections>
+                                                <action selector="deleteFlashCardButtonTapped:" destination="sd7-rd-JhV" eventType="touchUpInside" id="0KL-2w-hRO"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                                 <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
+                                    <outlet property="deleteButton" destination="fo2-j3-ysK" id="A8R-lP-x51"/>
                                     <outlet property="flashCardDeckTitleLabel" destination="wiz-qF-L1F" id="Y9v-qj-rLp"/>
                                 </connections>
                             </collectionViewCell>
@@ -97,6 +106,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addBarButtonItem" destination="sKE-Wl-tqE" id="FDI-Yu-2rR"/>
                         <outlet property="emptyDataView" destination="Kqa-lD-ygG" id="nFz-eb-PGL"/>
                         <segue destination="7Rg-B4-W7k" kind="show" identifier="toFlashCardsVC" id="Sfx-uG-a5a"/>
                     </connections>
@@ -578,6 +588,7 @@
         <image name="Right Arrow" width="42" height="42"/>
         <image name="cross-out-mark" width="85" height="85"/>
         <image name="documents-empty" width="42" height="42"/>
+        <image name="remove-symbol" width="42" height="42"/>
         <image name="two-rotating-arrows" width="42" height="42"/>
     </resources>
 </document>

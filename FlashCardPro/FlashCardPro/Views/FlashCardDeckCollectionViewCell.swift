@@ -7,10 +7,40 @@
 //
 
 import UIKit
+import RealmSwift
+
+protocol FlashCardDeckDelegate: class {
+    
+    func delete(cell: FlashCardDeckCollectionViewCell)
+    
+}
 
 class FlashCardDeckCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var flashCardDeckTitleLabel: UILabel!
+    //MARK: Properties
+    weak var delegate: FlashCardDeckDelegate?
+    let realm = try! Realm()
+    
+    //MARK: IB Outlets
+    @IBOutlet weak var flashCardDeckTitleLabel: UILabel!{
+        didSet{
+            deleteButton.isHidden = !isEditing
+        }
+    }
+    
+    var isEditing = false {
+        didSet{
+            deleteButton.isHidden = !isEditing
+        }
+    }
+    @IBOutlet weak var deleteButton: UIButton!
+    
+    //MARK: IB Actions
+    @IBAction func deleteFlashCardButtonTapped(_ sender: UIButton) {
+        
+        delegate?.delete(cell: self)
+        
+    }
     
 }
 
