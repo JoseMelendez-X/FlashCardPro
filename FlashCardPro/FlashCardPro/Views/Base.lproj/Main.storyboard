@@ -398,7 +398,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceC-SY-B89">
-                                        <rect key="frame" x="8" y="440" width="110" height="84"/>
+                                        <rect key="frame" x="8" y="440" width="100" height="84"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="84" id="vbq-eg-uBO"/>
                                         </constraints>
@@ -408,29 +408,35 @@
                                             <action selector="flipButtonTapped:" destination="7Rg-B4-W7k" eventType="touchUpInside" id="Qgg-m7-EIG"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U48-eJ-z5w">
-                                        <rect key="frame" x="148" y="440" width="97" height="84"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ygv-eK-mL7">
+                                        <rect key="frame" x="279" y="440" width="75" height="84"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="97" id="P5M-Q3-dFa"/>
+                                            <constraint firstAttribute="height" constant="84" id="Loi-AS-Am6"/>
+                                            <constraint firstAttribute="width" constant="75" id="adD-vg-xms"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="Right Arrow"/>
+                                        <connections>
+                                            <action selector="rightArrowButtonTapped:" destination="7Rg-B4-W7k" eventType="touchUpInside" id="qCN-JY-qkq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U48-eJ-z5w">
+                                        <rect key="frame" x="148" y="440" width="75" height="84"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="P5M-Q3-dFa"/>
                                             <constraint firstAttribute="height" constant="84" id="kmY-ls-bk1"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="Left Arrow"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ygv-eK-mL7">
-                                        <rect key="frame" x="263" y="440" width="91" height="84"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="84" id="Loi-AS-Am6"/>
-                                            <constraint firstAttribute="width" constant="91" id="adD-vg-xms"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="Right Arrow"/>
+                                        <connections>
+                                            <action selector="leftArrowButtonTapped:" destination="7Rg-B4-W7k" eventType="touchUpInside" id="ac5-na-rOZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Ygv-eK-mL7" firstAttribute="leading" secondItem="U48-eJ-z5w" secondAttribute="trailing" constant="18" id="00v-sN-lue"/>
+                                    <constraint firstItem="Ygv-eK-mL7" firstAttribute="leading" secondItem="U48-eJ-z5w" secondAttribute="trailing" constant="56" id="00v-sN-lue"/>
                                     <constraint firstItem="Ygv-eK-mL7" firstAttribute="top" secondItem="U48-eJ-z5w" secondAttribute="top" id="0BS-V1-cF2"/>
                                     <constraint firstAttribute="trailing" secondItem="Ygv-eK-mL7" secondAttribute="trailing" constant="21" id="MvH-W4-RVZ"/>
-                                    <constraint firstItem="U48-eJ-z5w" firstAttribute="leading" secondItem="ceC-SY-B89" secondAttribute="trailing" constant="30" id="PIZ-xg-sIN"/>
+                                    <constraint firstItem="U48-eJ-z5w" firstAttribute="leading" secondItem="ceC-SY-B89" secondAttribute="trailing" constant="40" id="PIZ-xg-sIN"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NLm-3P-Kwr" secondAttribute="trailing" constant="20" symbolic="YES" id="Vom-6m-cK0"/>
                                     <constraint firstItem="Ygv-eK-mL7" firstAttribute="top" secondItem="ceC-SY-B89" secondAttribute="top" id="X5s-G8-gKA"/>
                                     <constraint firstItem="ceC-SY-B89" firstAttribute="leading" secondItem="y3i-Yz-xbQ" secondAttribute="leading" constant="8" id="jGR-I5-fms"/>
@@ -537,7 +543,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XgQ-0G-3WQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2116" y="150.73891625615764"/>
+            <point key="canvasLocation" x="2116" y="150.67466266866569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U0t-UC-dgq">
