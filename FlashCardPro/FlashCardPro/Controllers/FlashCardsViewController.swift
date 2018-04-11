@@ -15,7 +15,8 @@ class FlashCardsViewController: UIViewController {
     var flashCardDeck: FlashCardDeck?
     var flashCards: List<FlashCard>?
     var isAnswerViewFaceUp = true
-    var count = 0
+    var cardNumber = 0
+    let realm = try! Realm()
     
     //MARK: - IB Outlets
     @IBOutlet weak var emptyDataView: UIView!
@@ -32,32 +33,30 @@ class FlashCardsViewController: UIViewController {
   
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        
-        if flashCardDeck?.flashCards.count == 0 {
-            
-            mainView.isHidden = true
-            flashCardView.isHidden = true
-            
-        } else {
-            
-            flashCardView.isHidden = false
-            mainView.isHidden = false
-            
-            flashCards = flashCardDeck?.flashCards
-            
-            questionTextView.text = flashCards![count].question
-            answerTextView.text = flashCards![count].answer
-            
-            flashCardView.layer.cornerRadius = 15.0
-            questionTextView.layer.cornerRadius = 15.0
-            answerTextView.layer.cornerRadius = 15.0
-            
-        }
-        
+        showFlashCards()
+
     }
     
     //MARK: IB Actions
+
+    @IBAction func deleteFlashCardButtonTapped(_ sender: UIBarButtonItem) {
+        
+            do {
+                try realm.write {
+                    //delete flashCard from database
+                    realm.delete((flashCardDeck?.flashCards[cardNumber])!)
+                    
+                    if cardNumber != 0 {
+                        cardNumber -= 1
+                    }
+                    
+                    showFlashCards()
+                }
+            } catch {
+                print(error.localizedDescription)
+            }
+    }
+    
     @IBAction func flipButtonTapped(_ sender: UIButton) {
         
         isAnswerViewFaceUp = !isAnswerViewFaceUp
@@ -77,25 +76,26 @@ class FlashCardsViewController: UIViewController {
     }
     @IBAction func leftArrowButtonTapped(_ sender: UIButton) {
         
-        if count == 0 {
+        if cardNumber == 0 {
             return
         }else {
-        count -= 1
-        questionTextView.text = flashCards![count].question
-        answerTextView.text = flashCards![count].answer
+        cardNumber -= 1
+            print(cardNumber)
+        questionTextView.text = flashCards![cardNumber].question
+        answerTextView.text = flashCards![cardNumber].answer
         }
     }
     
     
     @IBAction func rightArrowButtonTapped(_ sender: UIButton) {
         //go to next flashCard
-        
-        
-        if count + 1 == flashCards?.count {
+        if cardNumber + 1 == flashCards?.count {
             return
         } else {
-        count += 1
-        if let flashCard = flashCards?[count] {
+        cardNumber += 1
+            print(cardNumber)
+
+        if let flashCard = flashCards?[cardNumber] {
             questionTextView.text = flashCard.question
             answerTextView.text = flashCard.answer
         }
@@ -112,6 +112,32 @@ class FlashCardsViewController: UIViewController {
             let destinationVC = segue.destination as! CreateNewFlashCardViewController
             destinationVC.flashCardDeck = flashCardDeck
         }
+    }
+    
+    //checks to see if there are flash cards in the deck
+    func showFlashCards() {
+        
+        if flashCardDeck?.flashCards.count == 0 {
+            
+            mainView.isHidden = true
+            flashCardView.isHidden = true
+            
+        } else {
+            
+            flashCardView.isHidden = false
+            mainView.isHidden = false
+            
+            flashCards = flashCardDeck?.flashCards
+            
+            questionTextView.text = flashCards![cardNumber].question
+            answerTextView.text = flashCards![cardNumber].answer
+            
+            flashCardView.layer.cornerRadius = 15.0
+            questionTextView.layer.cornerRadius = 15.0
+            answerTextView.layer.cornerRadius = 15.0
+            
+        }
+        
     }
 
 }
