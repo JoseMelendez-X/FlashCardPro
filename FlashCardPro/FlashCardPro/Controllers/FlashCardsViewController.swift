@@ -41,6 +41,10 @@ class FlashCardsViewController: UIViewController {
 
     @IBAction func deleteFlashCardButtonTapped(_ sender: UIBarButtonItem) {
         
+        guard let flashcards = flashCards else {return}
+        
+        if !flashcards.isEmpty {
+        
             do {
                 try realm.write {
                     //delete flashCard from database
@@ -55,6 +59,7 @@ class FlashCardsViewController: UIViewController {
             } catch {
                 print(error.localizedDescription)
             }
+        }
     }
     
     @IBAction func flipButtonTapped(_ sender: UIButton) {
