@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3A43AAA68942B154EA2BA92A /* Pods_FlashCardProTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE8DF1D9E1D6F5986F2814FE /* Pods_FlashCardProTests.framework */; };
 		59086B492073E3AF00E3EDD9 /* CreateNewDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59086B482073E3AF00E3EDD9 /* CreateNewDeckViewController.swift */; };
+		593FE95C208697D7005CF28F /* RegisteredPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593FE95B208697D7005CF28F /* RegisteredPurchase.swift */; };
 		59871DD4206DD51C00E91E1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59871DD3206DD51C00E91E1A /* AppDelegate.swift */; };
 		59871DD9206DD51C00E91E1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59871DD7206DD51C00E91E1A /* Main.storyboard */; };
 		59871DDB206DD51C00E91E1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59871DDA206DD51C00E91E1A /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		59086B482073E3AF00E3EDD9 /* CreateNewDeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewDeckViewController.swift; sourceTree = "<group>"; };
+		593FE95B208697D7005CF28F /* RegisteredPurchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredPurchase.swift; sourceTree = "<group>"; };
 		59871DD0206DD51C00E91E1A /* FlashCardPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashCardPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59871DD3206DD51C00E91E1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59871DD8206DD51C00E91E1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			children = (
 				59B6F72B20730D3E005B4A0C /* CollectionViewCell.swift */,
 				59D2E0F9207822670035F3D3 /* textView.swift */,
+				593FE95B208697D7005CF28F /* RegisteredPurchase.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				59B6F729207301AE005B4A0C /* FlashCardDeckCollectionViewCell.swift in Sources */,
 				59871DD4206DD51C00E91E1A /* AppDelegate.swift in Sources */,
 				59D2E0FA207822670035F3D3 /* textView.swift in Sources */,
+				593FE95C208697D7005CF28F /* RegisteredPurchase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,7 +584,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GL34LYNV2E;
 				INFOPLIST_FILE = FlashCardPro/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.JoseMelendez.FlashCardPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -596,7 +603,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GL34LYNV2E;
 				INFOPLIST_FILE = FlashCardPro/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.JoseMelendez.FlashCardPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -613,7 +623,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GL34LYNV2E;
 				INFOPLIST_FILE = FlashCardProTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.JoseMelendez.FlashCardProTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -631,7 +645,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GL34LYNV2E;
 				INFOPLIST_FILE = FlashCardProTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.JoseMelendez.FlashCardProTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

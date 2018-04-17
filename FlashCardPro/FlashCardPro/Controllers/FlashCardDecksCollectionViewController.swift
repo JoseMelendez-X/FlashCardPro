@@ -20,6 +20,8 @@ class FlashCardDecksCollectionViewController: UICollectionViewController {
  
     
     //MARK: - Properties
+    let bundleId = "com.JoseMelendez.FlashCardPro"
+    let unlimitedDecks = RegisteredPurchase.unlimitedDecks
     
     //realm object
     let realm = try! Realm()
@@ -171,5 +173,61 @@ extension FlashCardDecksCollectionViewController: FlashCardDeckDelegate {
                     present(alertController, animated: true, completion: nil)
         }
     }
+}
+
+//In App Purchases
+
+extension FlashCardDecksCollectionViewController {
+    
+    func getInfo(purchase: RegisteredPurchase) {
+        NetworkActivityManager.NetworkOperationStarted()
+        SwiftyStoreKit.retrieveProductsInfo([bundleId + "." + purchase.rawValue], completion: {
+            result in
+            NetworkActivityManager.networkOperationFinished()
+
+            
+        })
+    }
+    
+    func purchase(purchase: RegisteredPurchase) {
+        SwiftyStoreKit.purchaseProduct(bundleId + "." + purchase.rawValue, completion: {
+            result in
+            NetworkActivityManager.networkOperationFinished()
+        })
+    }
+    
+    func restorePurchases() {
+        NetworkActivityManager.NetworkOperationStarted()
+        SwiftyStoreKit.restorePurchases(atomically: true, completion: {
+            result in
+            NetworkActivityManager.networkOperationFinished()
+            
+        })
+    }
+    
+    func verifyReceipt() {
+        NetworkActivityManager.NetworkOperationStarted()
+        SwiftyStoreKit.verifyReceipt(using: sharedSecret as! ReceiptValidator, completion: {
+            result in
+            NetworkActivityManager.networkOperationFinished()
+            
+            
+        })
+    }
+    
+    func verifyPurchase() {
+        NetworkActivityManager.NetworkOperationStarted()
+        SwiftyStoreKit.verifyReceipt(using: sharedSecret as! ReceiptValidator, completion: {
+            result in
+            NetworkActivityManager.networkOperationFinished()
+        })
+    }
+    
+    func refreshReciept() {
+        SwiftyStoreKit.refreshReceipt(completion: {
+            
+        })
+    }
+    
 }
 
