@@ -8,6 +8,7 @@ target 'FlashCardPro' do
 
     pod 'RealmSwift'
     pod 'TextFieldEffects'
+    pod 'SwiftyStoreKit'
 
   target 'FlashCardProTests' do
     inherit! :search_paths
