@@ -8,7 +8,11 @@
 
 import UIKit
 import RealmSwift
+import SwiftyStoreKit
+import StoreKit
 
+//In app purchases shared secret
+private let sharedSecret = "f87482e867684401bcbeef57951fba71"
 
 private let reuseIdentifier = "FlashCardCell"
 
